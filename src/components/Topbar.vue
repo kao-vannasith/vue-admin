@@ -87,7 +87,7 @@
           <v-list-item-icon>
             <v-icon>{{ menu.icon }}</v-icon>
           </v-list-item-icon>
-          <v-list-item-title>
+          <v-list-item-title @click="$router.push({name:menu.router})">
             {{ menu.title }}
           </v-list-item-title>
         </v-list-item>
@@ -102,10 +102,10 @@ export default {
   data() {
     return {
       menus: [
-        { title: "Profile", icon: "mdi-account" },
-        { title: "Change Password", icon: "mdi-key" },
-        { title: "Setting", icon: "mdi-cog" },
-        { title: "Logout", icon: "mdi-logout" },
+        { title: "Profile", icon: "mdi-account", router:"/" },
+        { title: "Change Password", icon: "mdi-key", router:"/" },
+        { title: "Setting", icon: "mdi-cog", router:"/" },
+        { title: "Logout", icon: "mdi-logout", router:"Login" },
       ],
       items: [
         {

@@ -14,6 +14,11 @@ const routes = [
     name: 'product',
     component: () => import('./../components/Product/TableProduct.vue')
   },
+  {
+    path: '/Login',
+    name: 'Login',
+    component: () => import('./../components/Login/Login.vue')
+  },
 ]
 
 const router = new VueRouter({
