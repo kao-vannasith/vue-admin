@@ -6,7 +6,7 @@
             prepend-inner-icon="mdi mdi-account-key"
             v-model="email"
             :readonly="loading"
-            :rules="[required]"
+            :rules="emailRules"
             class="mb-2"
             clearable
             label="Email"
@@ -36,7 +36,7 @@
           >
             LOG IN
           </v-btn>
-          <v-card-text class="text-center">
+          <!-- <v-card-text class="text-center">
           <a
           @click="$router.push({ name: 'Register' })"
             class="text-blue text-decoration-none"
@@ -45,7 +45,7 @@
           >
             Sign up now <v-icon icon="mdi-chevron-right"></v-icon>
           </a>
-          </v-card-text>
+          </v-card-text> -->
         </v-form>
       </v-card>
     </v-sheet>
@@ -57,9 +57,14 @@
     export default {
       data: () => ({
         form: false,
-        email: null,
         password: null,
-        loading: false,
+        loading: false, 
+        email: '',
+        emailRules: [
+        v => !!v || 'E-mail is required',
+        v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+      ],
+        
       }),
   
       methods: {
@@ -81,6 +86,7 @@
         required(v) {
           return !!v || 'Field is required'
         },
+        
       },
     }
   </script>

@@ -38,7 +38,7 @@ export default {
     return {
       links: [
         ["mdi-microsoft-windows", "Dashboard" , "/"],
-        ["mdi-account", "Profile", "/"],
+        ["mdi-account", "Profile", "Profile"],
         ["mdi-clipboard-list-outline", "Product", "Product"],
         ["mdi-card-account-details-outline", "Orders", "/"],
         ["mdi-cog", "System Setting", "/"],
