@@ -5,6 +5,7 @@
     <v-col lg="6" cols="12">
       <v-form>
         <v-text-field
+          v-model="search"
           class="p-0 m-0 mt-6"
           full-width
           dense
@@ -87,7 +88,7 @@
           <v-list-item-icon>
             <v-icon>{{ menu.icon }}</v-icon>
           </v-list-item-icon>
-          <v-list-item-title @click="$router.push({name:menu.router})">
+          <v-list-item-title @click="$router.push({ name: menu.router })">
             {{ menu.title }}
           </v-list-item-title>
         </v-list-item>
@@ -101,11 +102,12 @@ export default {
   name: "Topbar",
   data() {
     return {
+      search: '',
       menus: [
-        { title: "Profile", icon: "mdi-account", router:"/" },
-        { title: "Change Password", icon: "mdi-key", router:"/" },
-        { title: "Setting", icon: "mdi-cog", router:"/" },
-        { title: "Logout", icon: "mdi-logout", router:"Login" },
+        { title: "Profile", icon: "mdi-account", router: "/" },
+        { title: "Change Password", icon: "mdi-key", router: "/" },
+        { title: "Setting", icon: "mdi-cog", router: "/" },
+        { title: "Logout", icon: "mdi-logout", router: "Login" },
       ],
       items: [
         {
