@@ -69,7 +69,7 @@
   
       methods: {
         Login (){
-          axios.post('http://192.168.100.76:8080/auth/login', {email:this.email, password:this.password})
+          axios.post('http://192.168.100.96:3000/api/login', {email:this.email, password:this.password})
           .then ((res)=>{
             if(res){
               this.$router.push({name:'home'})
