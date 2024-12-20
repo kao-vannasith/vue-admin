@@ -15,7 +15,7 @@
     </template>
     <template v-slot:top>
       <v-toolbar flat>
-        <v-toolbar-title>My Products</v-toolbar-title>
+        <v-toolbar-title>ລາຍການລູກຄ້າ</v-toolbar-title>
         <v-divider class="mx-4" inset vertical></v-divider>
         <v-spacer></v-spacer>
         <v-dialog v-model="dialog" max-width="800px">
@@ -291,9 +291,13 @@ export default {
     dialog: false,
     dialogDelete: false,
     headers: [
-      { text: "Images", value: "image" },
-      { text: "Title", value: "title" },
-      { text: "Price", value: "price" },
+      { text: "ລ/ດ", value: "image" },
+      { text: "ລະຫັດຜູ້ໃຊ້ງານ", value: "title" },
+      { text: "ອີເມວ", value: "price" },
+      { text: "ປະເພດຜູ້ໃຊ້", value: "image" },
+      { text: "ປະເພດການຈ່າຍເງິນ", value: "title" },
+      { text: "ລົງທະບຽນ", value: "price" },
+      { text: "ຫມົດອາຍູ", value: "price" },
       { text: "Actions", value: "actions", sortable: false },
     ],
     desserts: [],

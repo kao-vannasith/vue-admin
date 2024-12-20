@@ -1,19 +1,10 @@
 <template>
   <v-navigation-drawer v-model="drawer" app>
     <v-img
-      height="140"
+      height="60"
       class="pa-4"
-      src="https://preview.pixlr.com/images/800wm/1439/2/1439104804.jpg"
+      src="../../public/15ffa6f1-9506-4d26-9136-fa90f1cf92f9.jpg"
     >
-      <div class="text-center">
-        <v-avatar class="mb-4" color="grey darken-1" size="64">
-          <v-img
-            aspect-ratio="30"
-            src="https://yt3.ggpht.com/esazPAO03T0f0vKdByJvkDy6MSwjyG5f-c_2S2CJapszQ3KPQyZarpoqvgv0Us0atUbILytj=s88-c-k-c0x00ffffff-no-rj"
-          />
-        </v-avatar>
-        <h2 class="white--text">Web Burden</h2>
-      </div>
     </v-img>
     <v-divider></v-divider>
     <v-list>
@@ -38,10 +29,10 @@ export default {
     return {
       links: [
         ["mdi-microsoft-windows", "Dashboard" , "/"],
-        ["mdi-account", "Profile", "Profile"],
-        ["mdi-clipboard-list-outline", "Product", "Product"],
-        ["mdi-card-account-details-outline", "Orders", "/"],
-        ["mdi-cog", "System Setting", "/"],
+        ["mdi-account", "ຂໍ້ມູນຫລັກ", "Member"],
+        ["mdi-card-account-details-outline", "ຂໍ້ມູນລູກຄ້າ", "Customer"],
+        ["mdi-clipboard-list-outline", "ຄູ່ມືການໃຊ້ງານ", "Setting"],
+        ["mdi-cog", "ອອກຈາກລະບົບ", "Overview"],
       ],
     };
   },

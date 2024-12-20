@@ -2,21 +2,22 @@
   <v-app-bar app elevate-on-scroll elevation="3" color="white">
     <v-app-bar-nav-icon @click="$emit('drawerEvent')"></v-app-bar-nav-icon>
     <v-spacer />
-    <v-col lg="6" cols="12">
-      <v-form>
-        <v-text-field
-          v-model="search"
-          class="p-0 m-0 mt-6"
-          full-width
-          dense
-          append-icon="mdi-magnify"
-          outlined
-          rounded
-          placeholder="Search"
-        />
-      </v-form>
-    </v-col>
     <v-spacer />
+    <template>
+ 
+      <v-col cols="2">
+        <v-select
+          v-model="e1"
+          :items="states"
+          menu-props="auto"
+          label="Select"
+          hide-details
+          prepend-icon="mdi-map"
+          single-line
+        ></v-select>
+      </v-col>
+  
+</template>
     <v-menu offset-y>
       <template v-slot:activator="{ attrs, on }">
         <span
@@ -103,6 +104,9 @@ export default {
   data() {
     return {
       search: '',
+      states: [
+          'laos', 'thailand', 'korea'
+        ],
       menus: [
         { title: "Profile", icon: "mdi-account", router: "/" },
         { title: "Change Password", icon: "mdi-key", router: "/" },
